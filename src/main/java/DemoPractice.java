@@ -35,6 +35,13 @@ public class DemoPractice {
                 System.out.println("Inserted a new record! New id: " + rs.getLong(1));
             }
 
+            // Delete
+            long idToDelete = 33;
+            query = "DELETE from albums WHERE id = " + idToDelete;
+            statement.execute(query);
+            System.out.println(idToDelete + " is gone");
+
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
