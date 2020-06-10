@@ -41,6 +41,12 @@ public class DemoPractice {
             statement.execute(query);
             System.out.println(idToDelete + " is gone");
 
+            // Update
+            double sales = 135;
+            long idToUpdate = 34;
+            statement.execute("UPDATE albums SET sales = " + sales + " WHERE id = " + idToUpdate);
+            System.out.println(idToUpdate + " is updated");
+
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
